@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -19,8 +24,23 @@
         //     }
         // }
         // }
+        
+        //task 1 with function
+        // let A = +prompt('Please give a number for A');
+        // let someDivideMath = (A) =>{
+        //     if(A===0){
+        //         alert('You cant divide by zero');
+        //     } else{
+        //         for(i=1;i<=1000;i++){
+        //         if(i%A === 0){
+        //             console.log(i);
+        //         }
+        //     }
+        //     }
+        // }
+        // someDivideMath(A);
 
-        //task 2
+        // task 2
         // let A = +prompt('Please give a number for A');
         // for(i=0;i<A;i++){
         //     if(Math.pow(i,2)<A){
@@ -28,15 +48,41 @@
         //     }
         // }
 
-        //task 3
+        //task 2 with function
         // let A = +prompt('Please give a number for A');
-        // let divisors = [];
-        // for(i=0;i<A;i++){
-        //     if(A%i===0){
-        //         divisors = i;
+        // let somePowMath = (A) => {
+        //     for(i=0;i<A;i++){
+        //     if(Math.pow(i,2)<A){
+        //         console.log(i);
         //     }
         // }
-        // console.log(Math.max(divisors));
+        // }
+        // somePowMath(A);
+
+
+
+        //task 3
+        // let A = +prompt('Please give a number for A');
+        // let divisor;
+        // for (let i = 1; i <= A/2; i++){
+        //     if (A%i === 0) {
+        //         divisor = i;            
+        //     }
+        // }
+        // console.log(divisor);
+
+        //task 3 with function
+        // let A = +prompt('Please give a number for A');
+        // let largestDivisor = (A) => {
+        //     let divisor;
+        //     for (let i = 1; i <= A/2; i++){
+        //     if (A%i === 0) {
+        //         divisor = i;            
+        //     }
+        // }
+        // return divisor;
+        // }
+        // console.log(largestDivisor(A));
 
         //task 4
         // let A = +prompt('Please give a number for A');
@@ -53,22 +99,54 @@
         //     }
         // }
 
-        //task 5 
-        // const limit = +prompt('Enter the limit: ');
-        // const number = +prompt('Enter the number: ');
-        // let n1 = 1, n2 = 1, nextTerm, nthNumber;
+
+        //task 4 with function
+        // let A = +prompt('Please give a number for A');
+        // let B = +prompt('Please give a number for B');
+        // let divisorOfSeven = (A,B) =>{
+        //     let temp;        
+        //     if(A>B){
+        //         temp=A;
+        //         A=B;
+        //         B=temp;
+        //     }
+        //     for(i=A;i<B;i++){
+        //         if(i%7===0){
+        //             console.log(i);
+        //         }
+        //     }
+        // }
+        // console.log(divisorOfSeven(A,B));
+        
+
+        // //task 5 
+        // const nthNumber = +prompt('Enter the number: ');
+        // let n1 = 0, n2 = 1, nextTerm;
         // nextTerm = n1 + n2;
-        // let Febunicci=[n1,n2];
-        // while (nextTerm <= limit) {
-        //     Febunicci.push(nextTerm);
+        // let Febunicci;
+        // while (nextTerm <= nthNumber) {
+        //     nextTerm = n1 + n2;
         //     n1 = n2;
         //     n2 = nextTerm;
-        //     nextTerm = n1 + n2;
         // }
-        // console.log('Febunicci=',Febunicci);
-        // console.log(Febunicci[number-1]);
+        // console.log(`Febunicci ${nthNumber}th=`,nextTerm);
 
-        //task 6
+        // task 5 with function
+        // const nthNumber = +prompt('Enter the number: ');
+        // let mathOfFebunicci = (nthNumber) =>{
+        //     let n1 = 0, n2 = 1, nextTerm;
+        //     nextTerm = n1 + n2;
+        //     let Febunicci;
+        //     while (nextTerm <= nthNumber) {
+        //         nextTerm = n1 + n2;
+        //         n1 = n2;
+        //         n2 = nextTerm;
+        //     }
+        //     return nextTerm;
+        // }
+        // console.log(`Febunicci ${nthNumber}th=`,mathOfFebunicci(nthNumber));
+
+        //task 6 - with function
         // const A = +prompt('Please give a number for A');
         // const B = +prompt('Please give a number for B');
         // const findGCD = (A, B) => {
@@ -91,23 +169,33 @@
         // let reversed = Math.sign(A) * parseInt(r);
         // console.log(reversed);
 
-        //task 8
-        // NOT WORKING
-        // const A = +prompt('Please give a number for A');
-        // const B = +prompt('Please give a number for B');
-        // let searchNum;
-        // let a= A.toString().split('');
-        // let b= B.toString().split('');
-        // console.log(a);
-        // console.log(b);
-        // for(i=0;i<b.length;i++){
-        //     searchNum = a.toString().search(b[i]);
+        // //task 7 without string methods
+        // let A = +prompt('Please give a number for A');
+        // let digit,str="";
+        // while(A>0){
+        //     digit=A%10;
+        //     A=(A-digit)/10;
+        //     str+=digit
         // }
-        // if(searchNum=-1){
-        //         alert('NO');
-        //     } else {
-        //         alert('YES');
+        // console.log(str);
+
+        //task 7 with function
+        // let A = +prompt('Please give a number for A');
+        // let reverseNumbers = (A) => {
+        //     let digit;
+        //     let str="";
+        //     while(A>0){
+        //         digit=A%10;
+        //         A=(A-digit)/10;
+        //         str+=digit
         //     }
+        //     return str;
+        // }
+        // console.log(reverseNumbers(A));
+
+
+        //task 8
+            //?
     </script>
 </body>
 </html>
